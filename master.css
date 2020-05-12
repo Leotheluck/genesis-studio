@@ -1,0 +1,3730 @@
+:root
+{
+    --main-color-1: #ffffff;
+    --main-color-2: #ffdb35;
+    --main-color-3: #f79071;
+    --main-color-4: #000000;
+    --text-color-1: #000000;
+    --text-color-2: #ffffff;
+    --text-color-3: #000000;
+    --text-color-4: #ffffff;
+    --time-stamp-color: #ffdb35;
+    --container-color-1: #dedede;
+    --container-color-2: #6f6f6f;
+    --container-color-3: #b3b3b3;
+    --container-color-4: #a1a1a1;
+}
+
+body
+{
+    margin: 0;
+    background: var(--main-color-1);
+    transition: 0.3s ease;
+}
+
+.main-container
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.left-container
+{
+    background: var(--container-color-1);
+    width: 64vw;
+    height: 90vh;
+    border-bottom: 5vh var(--main-color-1) solid;
+    border-top: 5vh var(--main-color-1) solid;
+    border-left: 3vw var(--main-color-1) solid;
+    border-right: 3vw var(--main-color-1) solid;
+    transition: 0.3s ease;
+}
+
+.absolute-menu
+{
+    position: absolute;
+    z-index: 5;
+    width: 80px;
+    height: 60px;
+    overflow: hidden;
+    transition: .2s;
+    border-right: 0px solid transparent;
+}
+
+.menu-bar
+{
+    width: 80px;
+    height: 15px;
+    display: flex;
+    margin-bottom: 7px;
+    transition: .2s;
+}
+
+.menu-bar-left
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: .2s;
+}
+
+.menu-bar-middle
+{
+    width: 50px;
+    background: var(--main-color-2);
+    transition: .2s;
+}
+
+.menu-bar-right
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--main-color-2);
+    transition: .2s;
+}
+
+.absolute-menu:hover
+{
+    width: 60px;
+    border-right: 20px solid transparent;
+    cursor: pointer;
+}
+
+.absolute-menu:hover .menu-bar
+{
+    margin-bottom: 3px;
+}
+
+.absolute-menu:hover .menu-bar-left
+{
+    border-right: 15px solid var(--main-color-3);
+    transform: translateX(-10px) rotateZ(90deg);
+}
+
+.absolute-menu:hover .menu-bar-middle
+{
+    transform: translateX(-10px);
+    background: var(--main-color-3);
+}
+
+.absolute-menu:hover .menu-bar-right
+{
+    transform: translateX(-10px);
+    border-left: 15px solid var(--main-color-3);
+}
+
+.close-menu
+{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.close-menu-title
+{
+    color: var(--main-color-2);
+    font-size: 110px;
+    transform: translateY(-7px);
+    transition: .2s;
+}
+
+.close-menu:hover .close-menu-title
+{
+    color: var(--main-color-3);
+    font-size: 80px;
+}
+
+.main-container .tutorial-views
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    overflow: hidden;
+    display: none;
+}
+
+.tutorial-views .tutorial-skip
+{
+    width: 10vw;
+    display: flex;
+    padding-bottom: 0.5vh;
+    position: absolute;
+    z-index: 12;
+    margin-top: 2vh;
+    margin-left: 1vw;
+    animation: displayTutorialMessage 0.5s ease;
+}
+
+.tutorial-skip .checkbox
+{
+    width: 10vw;
+    height: 4vh;
+    margin-right: 1vw;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.tutorial-skip .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right: 1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .left .active-triangle
+{
+    border-right: 1.5vh solid var(--main-color-4);
+}
+
+.tutorial-skip .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-skip .checkbox .center
+{
+    width: 7.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-skip .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.tutorial-skip .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.tutorial-skip .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.tutorial-skip .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-skip .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.tutorial-skip .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+/*
+    Tutorial messages
+*/
+
+.main-container .tutorial-views .tutorial-characters
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.main-container .tutorial-views .tutorial-characters .character
+{
+    height: 90vh;
+    margin-right: 10vw;
+    margin-bottom: 0vh;
+    transition: margin 1s ease, transform 0.5s ease;
+}
+
+.main-container .tutorial-views .tutorial-message
+{
+    position: absolute;
+    width: 35vw;
+    height: 30vh;
+    z-index: 11;
+    overflow: hidden;
+    display: none;
+    animation: displayTutorialMessage 0.5s ease;
+}
+
+@keyframes displayTutorialMessage {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+.main-container .tutorial-views .tutorial-1-message
+{
+    transform: translateX(50vw) translateY(60vh);
+}
+
+.main-container .tutorial-views .tutorial-2-message
+{
+    transform: translateX(50vw) translateY(60vh);
+}
+
+.main-container .tutorial-views .tutorial-3-message
+{
+    transform: translateX(50vw) translateY(60vh);
+}
+
+.main-container .tutorial-views .tutorial-4-message
+{
+    transform: translateX(30vw) translateY(60vh);
+}
+
+.main-container .tutorial-views .tutorial-5-message
+{
+    transform: translateX(30vw) translateY(60vh);
+}
+
+.main-container .tutorial-views .tutorial-message .header
+{
+    width: 32.5vw;
+    margin-left: 2.5vw;
+    height: 5vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+    transition: 0.75s ease;
+}
+
+.main-container .tutorial-views .tutorial-message:hover .header
+{
+    width: 29vw;
+    margin-left: 6vw;
+}
+
+.main-container .tutorial-views .tutorial-message .header .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 5vh solid transparent;
+    border-right: 5vh solid var(--main-color-2);
+    transform: rotateZ(90deg) translateY(5vh);
+}
+
+.main-container .tutorial-views .tutorial-message .header .name
+{
+    margin: 0;
+    font-weight: 100;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.main-container .tutorial-views .tutorial-message .content
+{
+    width: 35vw;
+    height: 22vh;
+    background: var(--main-color-1);
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container .tutorial-views .tutorial-message .content .message
+{
+    margin: 0;
+    font-weight: 100;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 1vh 0.5vw 1vh 0.5vw;
+    color: var(--text-color-3);
+}
+
+.tutorial-message .content .checkbox-container
+{
+    width: 35vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0.5vh;
+}
+
+.tutorial-message .content .checkbox
+{
+    width: 10vw;
+    height: 4vh;
+    margin-right: 1vw;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.tutorial-message .content .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right: 1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .left .active-triangle
+{
+    border-right: 1.5vh solid var(--main-color-4);
+}
+
+.tutorial-message .content .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-message .content .checkbox .center
+{
+    width: 8.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-message .content .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.tutorial-message .content .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.tutorial-message .content .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.tutorial-message .content .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.tutorial-message .content .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.tutorial-message .content .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+.main-container .tutorial-views .tutorial-message .footer
+{
+    width: 20vw;
+    height: 3vh;
+    background: var(--main-color-3);
+}
+
+/*
+    Tutorial
+*/
+
+.main-container .tutorial-views .tutorial-1
+{
+    width: 120vw;
+    height: 120vh;
+    opacity: 60%;
+    display: none;
+    flex-wrap: wrap;
+    filter: blur(30px);
+    transform: translateX(-10vw) translateY(-10vh);
+}
+
+.main-container .tutorial-views .tutorial-1 .top
+{
+    width: 120vw;
+    height: 28vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-1 .left
+{
+    width: 20vw;
+    height: 30vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-1 .right
+{
+    width: 67vw;
+    height: 30vh;
+    margin-left: 33vw;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-1 .bottom
+{
+    width: 120vw;
+    height: 62vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-2
+{
+    width: 120vw;
+    height: 120vh;
+    opacity: 60%;
+    display: none;
+    flex-wrap: wrap;
+    filter: blur(30px);
+    transform: translateX(-10vw) translateY(-10vh);
+}
+
+.main-container .tutorial-views .tutorial-2 .top
+{
+    width: 120vw;
+    height: 60vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-2 .left
+{
+    width: 12vw;
+    height: 30vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-2 .right
+{
+    width: 42vw;
+    height: 30vh;
+    margin-left: 64vw;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-2 .bottom
+{
+    width: 120vw;
+    height: 30vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-3
+{
+    width: 120vw;
+    height: 120vh;
+    opacity: 60%;
+    display: none;
+    flex-wrap: wrap;
+    filter: blur(30px);
+    transform: translateX(-10vw) translateY(-10vh);
+}
+
+.main-container .tutorial-views .tutorial-3 .top
+{
+    width: 120vw;
+    height: 90vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-3 .left
+{
+    width: 20vw;
+    height: 12vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-3 .right
+{
+    width: 50vw;
+    height: 12vh;
+    margin-left: 50vw;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-3 .bottom
+{
+    width: 120vw;
+    height: 18vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-4
+{
+    width: 120vw;
+    height: 120vh;
+    opacity: 60%;
+    display: none;
+    flex-wrap: wrap;
+    filter: blur(30px);
+    transform: translateX(-10vw) translateY(-10vh);
+}
+
+.main-container .tutorial-views .tutorial-4 .top
+{
+    width: 120vw;
+    height: 15vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-4 .left
+{
+    width: 81vw;
+    height: 40vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-4 .right
+{
+    width: 14vw;
+    height: 40vh;
+    margin-left: 25vw;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-4 .bottom
+{
+    width: 120vw;
+    height: 65vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-5
+{
+    width: 120vw;
+    height: 120vh;
+    opacity: 60%;
+    display: none;
+    flex-wrap: wrap;
+    filter: blur(30px);
+    transform: translateX(-10vw) translateY(-10vh);
+}
+
+.main-container .tutorial-views .tutorial-5 .top
+{
+    width: 120vw;
+    height: 62vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-5 .left
+{
+    width: 81vw;
+    height: 44vh;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-5 .right
+{
+    width: 14vw;
+    height: 44vh;
+    margin-left: 25vw;
+    background: var(--text-color-1);
+}
+
+.main-container .tutorial-views .tutorial-5 .bottom
+{
+    width: 120vw;
+    height: 14vh;
+    background: var(--text-color-1);
+}
+
+/*
+
+*/
+
+.absolute-nav
+{
+    position: absolute;
+    z-index: 5;
+    width: 30vw;
+    height: 100vh;
+    background: var(--main-color-1);
+    transform: translateX(-31vw);
+    transition: transform .3s ease;
+    transition: .3s ease;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.nav-content
+{
+    width: 35vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-title
+{
+    width: 24vw;
+    margin-left: 6vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-super-title
+{
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--text-color-3);
+}
+
+.nav-buttons
+{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-button
+{
+    display: flex;
+    align-items: center;
+    border-left: 0px solid transparent;
+    transform: translateX(15px);
+    transition: .2s ease;
+}
+
+.nav-button:hover
+{
+    cursor: pointer;
+    border-left: 25px solid transparent;
+    transform: translateX(40px);
+}
+
+.nav-button-title
+{
+    margin-right: 2vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--text-color-3);
+}
+
+.nav-style-bar
+{
+    width: 80px;
+    height: 15px;
+    display: flex;
+    transition: .2s;
+}
+
+.nav-style-bar-left
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: .2s;
+}
+
+.nav-style-bar-middle
+{
+    width: 50px;
+    background: var(--main-color-2);
+    transition: .2s;
+}
+
+.nav-style-bar-right
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid var(--main-color-2);
+    transition: .2s;
+}
+
+.nav-button:hover .nav-style-bar-left
+{
+    border-right: 15px solid var(--main-color-3);
+}
+
+.nav-button:hover .nav-style-bar-middle
+{
+    background: var(--main-color-3);
+}
+
+.nav-button:hover .nav-style-bar-right
+{
+    border-left: 15px solid var(--main-color-3);
+}
+
+.nav-footer-title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+    color: var(--text-color-3);
+}
+
+/*
+    Audio Options & Options 
+*/
+
+.main-container .options
+{
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+}
+
+.main-container .options .audio
+{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 19vh;
+    left: 35vw;
+    overflow: hidden;
+    animation: appearOption 1s ease;
+}
+
+@keyframes appearOption {
+    0%{
+        left: -50vw;
+        height: 6vh;
+    }
+    50%{
+        left: 35vw;
+        height: 6vh;
+    }
+    100%{
+        height: 50vh;
+    }
+}
+
+.main-container .options .audio .inner
+{
+    width: 50vw;
+    height: 50vh;
+}
+
+.main-container .options .audio .inner .header
+{
+    width: 50vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .audio .inner .header .title
+{
+    margin-left: 3vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .audio .inner .content-wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-container .options .audio .inner .content-wrapper .content
+{
+    width: 35vw;
+    height: 40vh;
+    background: var(--main-color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .title 
+{
+    margin: 3vh 0vw 1vh 3vw;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    transition: .2s;
+    color: var(--text-color-3);
+}
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .active
+{
+    color: var(--main-color-3);
+} 
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .slider 
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30vw;
+    height: 15px;
+    margin-left: 3vw;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}  
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .active-slider 
+{
+    background: #6f6f6f;
+}
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .slider::-webkit-slider-thumb 
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background: url('./img/slider-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main-container .options .audio .inner .content-wrapper .content .slider-option .slider::-webkit-slider-thumb:hover
+{
+    opacity: 0.7;
+}
+  
+.main-container .options .audio .inner .content-wrapper .content .slider-option .slider::-moz-range-thumb 
+{
+    width: 35px;
+    height: 35px;
+    border: 0;
+    background: url('./img/slider-button.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.main-container .options .audio .inner .footer
+{
+    width: 40vw;
+    height: 4vh;
+    margin-left: 10vw;
+    background: var(--main-color-3);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .audio .inner .volume-title
+{
+    width: 15vw;
+    height: 40vh;
+    background: var(--main-color-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .options .audio .inner .volume-title .title
+{
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 80px;
+    pointer-events: none;
+    color: var(--text-color-3);
+}
+
+/*
+    Graphics Options
+*/
+
+.main-container .options .graphics
+{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    top: 28vh;
+    left: 35vw;
+    overflow: hidden;
+    animation: appearOption 1s ease;
+}
+
+.main-container .options .graphics .inner
+{
+    width: 50vw;
+    height: 50vh;
+}
+
+.main-container .options .graphics .inner .header
+{
+    width: 50vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .graphics .inner .header .title
+{
+    margin-left: 3vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .graphics .inner .content-wrapper
+{
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-top
+{
+    width: 50vw;
+    height: 12vh;
+    background: var(--main-color-1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-top .mode-container
+{
+    padding-top: 4vh;
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-top .mode-container .big-title
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--text-color-3);
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-top .mode-container .checkbox
+{
+    margin-top: 1vh;
+    width: 6vw;
+    height: 4vh;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-top .mode-container .active-checkbox
+{
+    cursor: default;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .left .active-triangle
+{
+    border-right:  1.5vh solid var(--main-color-4);
+}
+
+.content-wrapper .content-top .mode-container .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content-top .mode-container .checkbox .center
+{
+    width: 4.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content-top .mode-container .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.content-wrapper .content-top .mode-container .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content-top .mode-container .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content-top .mode-container .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+.main-container .options .graphics .inner .content-wrapper .content
+{
+    padding-top: 5vh;
+    width: 30vw;
+    height: 40vh;
+    background: var(--main-color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content .big-title
+{
+    color: var(--text-color-3);
+    margin: 0;
+    margin-top: 2vh;
+    margin-left: 3vw;
+    margin-bottom: 2vh;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right
+{
+    padding-top: 5vh;
+    width: 16vw;
+    height: 32vh;
+    border-top: 4vh var(--main-color-1) solid;
+    border-bottom: 4vh var(--main-color-1) solid;
+    border-left: 2vw var(--main-color-1) solid;
+    border-right: 2vw var(--main-color-1) solid;
+    background: var(--main-color-1);
+    display: flex;
+    overflow: hidden;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .triangle-container
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: translateY(-100px);
+    z-index: 6;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .triangle-container .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15vw solid transparent;
+    border-left: 15vw solid var(--main-color-1);
+    transform: rotateZ(20deg) translateX(-4vw);
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .triangle2-container
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: translateY(-100px);
+    z-index: 6;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .triangle2-container .triangle2
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 15vw solid transparent;
+    border-left: 15vw solid var(--main-color-1);
+    transform: rotateZ(200deg) translateX(-2vw) translateY(-20vh);
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .player-still
+{
+    position: relative;
+    padding-top: 5vh;
+    width: 16vw;
+    height: 32vh;
+    background-image: url(./img/player-still.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-24vw) translateY(-5vh);
+    filter: saturate(0%) hue-rotate(0deg) invert(0%);
+    transition: 0.5s ease;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content-right .player-still .player
+{
+    width: 16vw;
+    height: 32vh;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content .player-palette-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5vw;
+    margin-bottom: 1.5vh;
+}
+
+/*
+    Graphics Options
+*/
+
+.main-container .options .graphics .inner .content-wrapper .content .checkbox
+{
+    margin-top: 1vh;
+    width: 6vw;
+    height: 4vh;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.main-container .options .graphics .inner .content-wrapper .content .active-checkbox
+{
+    cursor: default;
+}
+
+.content-wrapper .content .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content-wrapper .content .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .left .active-triangle
+{
+    border-right:  1.5vh solid var(--main-color-4);
+}
+
+.content-wrapper .content .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content .checkbox .center
+{
+    width: 4vh;
+    height: 4vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content .checkbox .center .color1
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 3vh solid transparent;
+    transform: rotateZ(0deg) translateX(1.5vh);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .center .color2
+{
+    width: 0; 
+    height: 0;
+    border-bottom: 3vh solid transparent;
+    transform: rotateZ(180deg) translateX(1.5vh);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content-wrapper .content .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.content-wrapper .content .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.content-wrapper .content .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+/*
+    Palette options
+*/
+
+.main-container .options .graphics .inner .content-wrapper .content .player-palette-container .title
+{
+    color: var(--text-color-3);
+    margin: 0;
+    margin-top: 1.75vh;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+}
+
+.black-white .color1
+{
+    border-left: 3vh solid #000000;
+}
+
+.black-white .color2
+{
+    border-left: 3vh solid #ffffff;
+}
+
+.white-black .color1
+{
+    border-left: 3vh solid #ffffff;
+}
+
+.white-black .color2
+{
+    border-left: 3vh solid #000000;
+}
+
+.white-red .color1
+{
+    border-left: 3vh solid #ffffff;
+}
+
+.white-red .color2
+{
+    border-left: 3vh solid #f64b3c;
+}
+
+.black-yellow .color1
+{
+    border-left: 3vh solid #000000;
+}
+
+.black-yellow .color2
+{
+    border-left: 3vh solid #ffdb35;
+}
+
+
+/*
+    Footer of the graphics option tab
+*/
+
+.main-container .options .graphics .inner .footer
+{
+    width: 40vw;
+    height: 4vh;
+    margin-left: 10vw;
+    background: var(--main-color-3);
+    display: flex;
+    align-items: center;
+}
+
+/*
+    Language tab
+*/
+
+.main-container .options .language
+{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 24vh;
+    top: 38vh;
+    left: 35vw;
+    overflow: hidden;
+    animation: appearSmallOption 1s ease;
+}
+
+.main-container .options .language .inner
+{
+    width: 50vw;
+    height: 24vh;
+}
+
+.main-container .options .language .inner .header
+{
+    width: 50vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .language .inner .header .title
+{
+    margin-left: 3vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .language .inner .content
+{
+    width: 50vw;
+    height: 14vh;
+    background: var(--main-color-1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-container .options .language .inner .footer
+{
+    width: 40vw;
+    height: 4vh;
+    margin-left: 10vw;
+    background: var(--main-color-3);
+    display: flex;
+    align-items: center;
+}
+
+@keyframes appearSmallOption {
+    0%{
+        left: -50vw;
+        height: 6vh;
+    }
+    50%{
+        left: 35vw;
+        height: 6vh;
+    }
+    100%{
+        height: 24vh;
+    }
+}
+
+.main-container .options .language .inner .content .language-container
+{
+    width: 10vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .options .language .inner .content .language-container .big-title
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--text-color-3);
+}
+
+.main-container .options .language .inner .content .language-container .checkbox
+{
+    margin-top: 1vh;
+    width: 6vw;
+    height: 4vh;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.main-container .options .language .inner .content .language-container .active-checkbox
+{
+    cursor: default;
+}
+
+.content .language-container .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .language-container .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.content .language-container .checkbox .left .active-triangle
+{
+    border-right:  1.5vh solid var(--main-color-4);
+}
+
+.content .language-container .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .language-container .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.content .language-container .checkbox .center
+{
+    width: 4.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.content .language-container .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.content .language-container .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.content .language-container .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.content .language-container .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .language-container .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .language-container .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.content .language-container .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.content .language-container .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+/*
+    Tutorial tab
+*/
+
+.main-container .options .tutorial
+{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 24vh;
+    top: 47vh;
+    left: 35vw;
+    overflow: hidden;
+    animation: appearSmallOption 1s ease;
+}
+
+.main-container .options .tutorial .inner
+{
+    width: 50vw;
+    height: 24vh;
+}
+
+.main-container .options .tutorial .inner .header
+{
+    width: 50vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .tutorial .inner .header .title
+{
+    margin-left: 3vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .tutorial .inner .content
+{
+    width: 50vw;
+    height: 14vh;
+    background: var(--main-color-1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-container .options .tutorial .inner .footer
+{
+    width: 40vw;
+    height: 4vh;
+    margin-left: 10vw;
+    background: var(--main-color-3);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .tutorial .inner .content .tutorial-container
+{
+    width: 15vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main-container .options .tutorial .inner .content .tutorial-container .big-title
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--text-color-3);
+}
+
+.main-container .options .tutorial .inner .content .tutorial-container .checkbox
+{
+    width: 6vw;
+    height: 4vh;
+    margin-right: 1vw;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .tutorial-container .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .left .active-triangle
+{
+    border-right:  1.5vh solid var(--main-color-4);
+}
+
+.content .tutorial-container .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.content .tutorial-container .checkbox .center
+{
+    width: 4.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.content .tutorial-container .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.content .tutorial-container .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.content .tutorial-container .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .tutorial-container .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.content .tutorial-container .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.content .tutorial-container .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+/*
+    GitHub Tab
+*/
+
+.main-container .options .github
+{
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 24vh;
+    top: 56vh;
+    left: 35vw;
+    overflow: hidden;
+    animation: appearSmallOption 1s ease;
+}
+
+.main-container .options .github .inner
+{
+    width: 50vw;
+    height: 24vh;
+}
+
+.main-container .options .github .inner .header
+{
+    width: 50vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .github .inner .header .title
+{
+    margin-left: 3vw;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.main-container .options .github .inner .content
+{
+    width: 50vw;
+    height: 14vh;
+    background: var(--main-color-1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-container .options .github .inner .footer
+{
+    width: 40vw;
+    height: 4vh;
+    margin-left: 10vw;
+    background: var(--main-color-3);
+    display: flex;
+    align-items: center;
+}
+
+.main-container .options .github .inner .content .github-container
+{
+    width: 15vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.main-container .options .github .inner .content .github-container .big-title
+{
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+    color: var(--text-color-3);
+}
+
+.main-container .options .github .inner .content .github-container .checkbox
+{
+    width: 6vw;
+    height: 4vh;
+    margin-right: 1vw;
+    display: flex;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.content .github-container .checkbox .left
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .github-container .checkbox .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-right:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.content .github-container .checkbox .left .active-triangle
+{
+    border-right:  1.5vh solid var(--main-color-4);
+}
+
+.content .github-container .checkbox .left .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .github-container .checkbox .left .active
+{
+    background: var(--main-color-4);
+}
+
+.content .github-container .checkbox .center
+{
+    width: 4.5vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.content .github-container .checkbox .active-center
+{
+    background: var(--main-color-4);
+}
+
+.content .github-container .checkbox .center .title
+{
+    color: var(--text-color-1);
+    margin: 0;
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.content .github-container .checkbox .active-center .title
+{
+    color: var(--text-color-2);
+}
+
+.content .github-container .checkbox .right
+{
+    width: 0.75vw;
+    height: 4vh;
+    overflow: hidden;
+}
+
+.content .github-container .checkbox .right .block
+{
+    background: var(--main-color-2);
+    width: 0.75vw; 
+    height: 2.5vh; 
+    transition: 0.3s ease;
+}
+
+.content .github-container .checkbox .right .active
+{
+    background: var(--main-color-4);
+}
+
+.content .github-container .checkbox .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.5vh solid transparent;
+    border-left:  1.5vh solid var(--main-color-2);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.content .github-container .checkbox .right .active-triangle
+{
+    border-left:  1.5vh solid var(--main-color-4);
+}
+
+/*
+    Sound List, left container style using triangles
+*/
+
+.main-filter
+{
+    position: absolute;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    display: none;
+    opacity: 0%;
+    transition: opacity .3s ease;
+}
+
+.absolute-triangles
+{
+    width: 64vw;
+    height: 90vh;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.triangle-container
+{
+    width: 3vw;
+    height: 3vh;
+}
+
+.triangle-container:nth-child(2)
+{
+    margin-top: 87vh;
+}
+
+.top-left-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 400px solid transparent;
+    border-left: 400px solid var(--main-color-1);
+    transform: rotateZ(20deg) translateY(-8vh) translateX(-8vw);
+    transition: 0.3s ease;
+}
+
+.bottom-right-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 400px solid transparent;
+    border-left: 400px solid var(--main-color-1);
+    transform: rotateZ(200deg) translateY(19vh) translateX(19vw);
+    transition: 0.3s ease;
+}
+
+.main-title
+{
+    width: 40vw;
+    height: 6vh;
+    background: var(--main-color-2);
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-super-title
+{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+}
+
+.main-title-right
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 6vh solid transparent;
+    border-left: 6vh solid var(--main-color-2);
+    transition: .2s;
+    transform: translateX(5.9vh);
+}
+
+.sound-list-container
+{
+    overflow: hidden;
+    width: 34vw;
+    height: 31vh;
+    background: var(--container-color-3);
+    margin: 12vh 0vw 0vh 6vw;
+}
+
+.sound-list-triangle-container
+{
+    position: absolute;
+    z-index: 2;
+    width: 15vw;
+    height: 10vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sound-list-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 300px solid transparent;
+    border-left: 300px solid var(--container-color-1);
+    transform: rotateZ(20deg) translateY(-8vh) translateX(-8vw);
+}
+
+.sound-list-super-triangle-container
+{
+    width: 34vw;
+    height: 31vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sound-list-triangle2-container
+{
+    width: 15vw;
+    height: 10vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sound-list-triangle2
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 400px solid transparent;
+    border-left: 400px solid var(--container-color-1);
+    transform: rotateZ(200deg) translateY(20vh) translateX(1vw);
+}
+
+.sound-list-title
+{
+    width: 26vw;
+    height: 5vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sound-list-super-title
+{
+    margin: 0;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-right: 2.5vw;
+    pointer-events: none;
+}
+
+.sound-list
+{
+    width: 34vw;
+    height: 24vh;
+    padding-top: 1vh;
+    overflow: scroll;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background: var(--container-color-2);
+}
+
+.sound-list .item
+{
+    height: 10vh;
+    width: 9.5vw;
+    margin: 1vh 0.5vw 1vh 0.5vw;
+    background: var(--main-color-2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sound-list .item .picture
+{
+    width: 7vw;
+    height: 10vh;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sound-list .item .drum, .drum
+{
+    background-image: url(./img/drum-item.jpg);
+}
+
+.sound-list .item .cymbal, .cymbal
+{
+    background-image: url(./img/cymbal-item.jpg);
+}
+
+.sound-list .item .koto, .koto
+{
+    background-image: url(./img/koto-item.jpg);
+}
+
+.sound-list .item .kick, .kick
+{
+    background-image: url(./img/kick-item.jpg);
+}
+
+.sound-item-picture:hover
+{
+    cursor: default;
+}
+
+.sound-list .item .picture .title
+{
+    width: 7vw;
+}
+
+.sound-list .item .drum .title, .inside-item .drum .title
+{
+    background: #34a7a6;
+}
+
+.sound-list .item .cymbal .title, .inside-item .cymbal .title
+{
+    background: #57a82b;
+}
+
+.sound-list .item .koto .title, .inside-item .koto .title
+{
+    background: #a52f48;
+}
+
+.sound-list .item .kick .title, .inside-item .kick .title
+{
+    background: #4c4fc5;
+}
+
+.sound-list .item .picture .title .super-title
+{
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.sound-list .item .buttons
+{
+    width: 2.5vw;
+    height: 10vh;
+}
+
+.sound-list .item .buttons .play
+{
+    width: 2.5vw;
+    height: 5vh;
+    background: var(--main-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-list .item .buttons .play .button
+{
+    width: 1.5vw;
+    height: 3vh;
+    background-image: url(./img/play-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.sound-list .item .buttons .play:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.sound-list .item .buttons .pause
+{
+    width: 2.5vw;
+    height: 5vh;
+    background: var(--main-color-3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-list .item .buttons .pause .button
+{
+    width: 1.5vw;
+    height: 3vh;
+    background-image: url(./img/pause-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sound-list .item .buttons .pause:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.sound-list .item .buttons .move
+{
+    width: 2.5vw;
+    height: 5vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-list .item .buttons .move .button
+{
+    width: 1.5vw;
+    height: 3vh;
+    background-image: url(./img/move-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sound-list .item .buttons .move:hover
+{
+    cursor: move;
+    background: #f2ad27;
+}
+
+.super-sound-play-bar
+{
+    margin-top: 3vh;
+    width: 64vw;
+    height: 27vh;
+    overflow: scroll;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sound-play-bar
+{
+    width: 64vw;
+    height: 24vh;
+}
+
+/*
+    Time stamps & markers
+*/
+
+.super-time-stamp
+{
+    position: relative;
+}
+
+.time-stamp
+{
+    width: 0.2vw;
+    height: 24vh;
+    background: var(--time-stamp-color);
+    position: absolute;
+    margin: 0vw;
+    pointer-events: none;
+    display: none;
+    /* margin-left: 63.8vw; */
+    animation: timeStamp 8s linear infinite;
+}
+
+@keyframes timeStamp{
+    0%{
+        margin-left: 0vw;
+    } 100%{
+        margin-left: 63.8vw;
+    }
+}
+
+.time-markers
+{
+    position: absolute;
+    width: 64vw;
+    height: 2vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(-2vh);
+}
+
+.time-mark
+{
+    margin: 0;
+    margin-left: 6vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+    color: var(--text-color-3);
+}
+
+.time-mark:nth-child(1)
+{
+    margin-left: 6.5vw;
+}
+
+.time-mark:nth-child(3), .time-mark:nth-child(4), .time-mark:nth-child(5), .time-mark:nth-child(6)
+{
+    margin-left: 5.5vw;
+}
+
+.time-mark:nth-child(7)
+{
+    margin-left: 5.75vw;
+}
+
+.time-markers-16-container
+{
+    position: relative;
+}
+
+.time-markers-16
+{
+    position: absolute;
+    width: 128vw;
+    height: 2vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(-2vh);
+}
+
+.time-mark-16
+{
+    margin: 0;
+    margin-left: 5.60vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+    color: var(--text-color-3);
+}
+
+.time-mark-16:nth-child(1)
+{
+    margin-left: 6.5vw;
+}
+
+.time-markers-32-container
+{
+    position: relative;
+}
+
+.time-markers-32
+{
+    position: absolute;
+    width: 256vw;
+    height: 2vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    transform: translateY(-2vh);
+}
+
+.time-mark-32
+{
+    margin: 0;
+    margin-left: 5.60vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    pointer-events: none;
+    color: var(--text-color-3);
+}
+
+.time-mark-32:nth-child(1)
+{
+    margin-left: 6.5vw;
+}
+
+
+/*
+    Audio track CSS
+*/
+
+.sound-play-bar-title
+{
+    position: absolute;
+    width: 12vw;
+    height: 3vh;
+    transform: translateY(-3.1vh) translateX(6vw);
+    display: flex;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sound-play-bar-super-title
+{
+    width: 12vw;
+    height: 3vh;
+    display: flex;
+}
+
+.sound-play-bar-super-title-triangle-left
+{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-bottom: 3vh solid transparent;
+    border-left: 3vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translateX(2.9vh);
+    z-index: 2;
+}
+
+.sound-play-bar-super-title-middle
+{
+    width: 11vw;
+    height: 3vh;
+    background: var(--main-color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.sound-play-bar-super-title-text
+{
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.sound-play-bar-super-title-triangle-right
+{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-bottom: 3vh solid transparent;
+    border-right: 3vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translateX(-10.95vw) translateY(-0.05vh);
+    z-index: 2;
+}
+
+.sound-play-bar-options
+{
+    position: absolute;
+    background: var(--container-color-2);
+    height: 2.75vh;
+    width: 9vw;
+    transform: translateY(-2.75vh) translateX(16vw);
+    z-index: 1;
+}
+
+.sound-play-bar-options:hover
+{
+    cursor: pointer;
+}
+
+.sound-play-bar-options-triangle
+{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-bottom: 2.75vh solid transparent;
+    border-right: 2.75vh solid var(--container-color-2);
+    transform: rotateZ(180deg) translateX(-9vw) translateY(0.02vh);
+}
+
+.sound-play-bar-options-change
+{
+    width: 9vw;
+    height: 2.75vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--text-color-4);
+}
+
+.sound-play-bar-options-title
+{
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding-right: 1.3vw;
+    margin-right: 1.5vw;
+    background-image: url(./img/drop-down-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    transition: 0.2s ease;
+}
+
+.sound-play-bar-options:hover .sound-play-bar-options-title
+{
+    opacity: 0.60;
+}
+
+.sound-play-bar-menu
+{
+    position: absolute;
+    width: 10vw;
+    height: 12vh;
+    background: var(--container-color-2);
+    transform: translateX(16.5vw);
+    display: none;
+    transition: opacity 0.2s ease;
+}
+
+.sound-play-bar-option-box
+{
+    width: 10vw;
+    height: 4vh;
+    background: var(--container-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-4);
+    transition: 0.2s;
+}
+
+.sound-play-bar-option-box:hover
+{
+    background: #515151;
+    cursor: pointer;
+}
+
+.sound-play-bar-option-title
+{
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.active-bar
+{
+    background: var(--main-color-2);
+    color: var(--text-color-1)
+}
+
+.active-bar:hover
+{
+    background: var(--main-color-3);
+}
+
+/*
+    Audio Track buttons
+*/
+
+.sound-play-bar .clear
+{
+    position: absolute;
+    width: 10vw;
+    height: 3vh;
+    transform: translateY(-3.1vh) translateX(51vw);
+    display: flex;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.sound-play-bar .clear .left-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 3vh solid transparent;
+    border-left: 3vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translateX(-0.05vw);
+    z-index: 2;
+    transition: 0.2s ease;
+}
+
+.sound-play-bar .clear .button
+{
+    width: 5vw;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease;
+}
+
+.sound-play-bar .clear .button .title
+{
+    color: var(--text-color-1);
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+
+.sound-play-bar .clear .right-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 3vh solid transparent;
+    border-right: 3vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translateX(0.05vw);
+    z-index: 2;
+    transition: 0.2s ease;
+}
+
+.sound-play-bar .clear:hover 
+.left-triangle
+{
+    border-left: 3vh solid var(--main-color-3);
+}
+
+.sound-play-bar .clear:hover 
+.button
+{
+    background: var(--main-color-3);
+}
+
+.sound-play-bar .clear:hover 
+.right-triangle
+{
+    border-right: 3vh solid var(--main-color-3);
+}
+
+/*
+    Audio track CSS
+*/
+
+.sound-play-bar-stage
+{
+    background: var(--container-color-3);
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 
+    12.5% 12.5% 12.5% 12.5% 
+    12.5% 12.5% 12.5% 12.5% ;
+    grid-template-rows: 100%;
+}
+
+.super-time-stamp-16X
+{
+    position: relative;
+}
+
+.super-time-stamp-32X
+{
+    position: relative;
+}
+
+.time-stamp-16X
+{
+    width: 0.2vw;
+    height: 24vh;
+    background: var(--time-stamp-color);
+    position: absolute;
+    margin: 0vw;
+    pointer-events: none;
+    display: none;
+    /* margin-left: 63.8vw; */
+    animation: timeStamp16X 8s linear infinite;
+}
+
+.time-stamp-32X
+{
+    width: 0.2vw;
+    height: 24vh;
+    background: var(--time-stamp-color);
+    position: absolute;
+    margin: 0vw;
+    pointer-events: none;
+    display: none;
+    animation: timeStamp32X 16s linear infinite;
+}
+
+@keyframes timeStamp16X{
+    0%{
+        margin-left: 0vw;
+    } 100%{
+        margin-left: 127.8vw;
+    }
+}
+
+@keyframes timeStamp32X{
+    0%{
+        margin-left: 0vw;
+    } 100%{
+        margin-left: 255.8vw;
+    }
+}
+
+.sound-play-bar-stage-16X
+{
+    background: var(--container-color-3);
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 
+    6.25% 6.25% 6.25% 6.25% 
+    6.25% 6.25% 6.25% 6.25%
+    6.25% 6.25% 6.25% 6.25% 
+    6.25% 6.25% 6.25% 6.25%;
+    grid-template-rows: 100%;
+}
+
+.sound-play-bar-stage-32X
+{
+    background: var(--container-color-3);
+    height: 8vh;
+    display: grid;
+    grid-template-columns: 
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%
+    3.125% 3.125% 3.125% 3.125%;
+    grid-template-rows: 100%;
+}
+
+/*
+    Differents audio tracks (8x8s, 16x8s, 32x16s)
+*/
+
+.sound-play-bar-version-8
+{
+    display: block;
+}
+
+.sound-play-bar-version-16
+{
+    display: none;
+}
+
+.sound-play-bar-version-32
+{
+    display: none;
+}
+
+/*
+    CSS for the music item once it is in a box of the track
+*/
+
+.sound-box
+{
+    height: 7vh;
+    width: 7.5vw;
+    border-bottom: 0.5vh var(--container-color-4) solid;
+    border-top: 0.5vh var(--container-color-4) solid;
+    border-left: 0.25vw var(--container-color-4) solid;
+    border-right: 0.25vw var(--container-color-4) solid;
+    transition: .2s;
+}
+
+.hovered
+{
+    border-bottom: 0.5vh var(--container-color-2) dashed;
+    border-top: 0.5vh var(--container-color-2) dashed;
+    border-left: 0.25vw var(--container-color-2) dashed;
+    border-right: 0.25vw var(--container-color-2) dashed;
+}
+
+.inside-item
+{
+    width: 7.5vw;
+    height: 7vh;
+    margin: 0;
+    background-size: contain;
+    display: flex;
+}
+
+.inside-item .picture
+{
+    width: 5.5vw;
+    height: 7vh;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.inside-item .picture .title
+{
+    width: 5.5vw;
+}
+
+.inside-item .picture .title .super-title
+{
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.inside-item .buttons
+{
+    width: 2vw;
+    height: 7vh;
+}
+
+.inside-item .buttons .play
+{
+    width: 2vw;
+    height: 3.5vh;
+    background: var(--main-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-item .buttons .play .button
+{
+    width: 1vw;
+    height: 2vh;
+    background-image: url(./img/play-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.inside-item .buttons .play:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.inside-item .buttons .pause
+{
+    width: 2vw;
+    height: 3.5vh;
+    background: var(--main-color-3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-item .buttons .pause .button
+{
+    width: 1vw;
+    height: 2vh;
+    background-image: url(./img/pause-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.inside-item .buttons .pause:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.inside-item .buttons .remove
+{
+    width: 2vw;
+    height: 3.5vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside-item .buttons .remove .button
+{
+    width: 1vw;
+    height: 2vh;
+    background-image: url(./img/remove-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inside-item .buttons .remove:hover
+{
+    cursor: pointer;
+    background: #f2ad27;
+}
+
+.invisible
+{
+    border: none
+}
+
+.dragged
+{
+    border: 2px var(--main-color-1) dashed;
+}
+
+/* 
+    Section for the background musics
+*/
+
+.background-music-container
+{
+    height: 10vh;
+    width: 56vw;
+    margin-left: 6vw;
+    margin: 2vh 0vw 0vh 8vw;
+    padding-top: 2vh;
+    overflow: scroll;
+    border-bottom: var(--container-color-3) solid 1vh;
+}
+
+.background-music-title
+{
+    position: absolute;
+    width: 20vw;
+    height: 6vh;
+    transform: translateY(-2vh);
+    z-index: 2;
+}
+
+.background-music-title-top
+{
+    width: 20vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.background-music-super-title
+{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    margin: 0;
+    transform: translateX(-0.5vw);
+}
+
+.background-triangle-top-left
+{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-bottom: 4vh solid transparent;
+    border-left: 4vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translate(4vh);
+}
+
+.background-music-title-foot
+{
+    width: 16vw;
+    height: 2vh;
+    transform: translateX(-4vh);
+    background: var(--main-color-3);
+    transition: .5s ease;
+    pointer-events: none;
+}
+
+.background-triangle-bottom-right
+{
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-bottom: 2vh solid transparent;
+    border-left: 2vh solid var(--main-color-3);
+    transform: translateX(15.95vw);
+    transition: .5s ease;
+}
+
+.background-music-title:hover .background-music-title-foot
+{
+    width: 12vw;
+}
+
+.background-music-title:hover .background-triangle-bottom-right
+{
+    transform: translateX(11.95vw);
+}
+
+.background-music-list-transparent
+{
+    position: absolute;
+    height: 11vh;
+    width: 30vh;
+    z-index: 1;
+    background-image: linear-gradient(to right, var(--container-color-1), rgba(255,0,0,0));
+}
+
+.background-music-list
+{
+    background: var(--container-color-2);
+    width: 130vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.background-music-item
+{
+    width: 8vw;
+    height: 8vh;
+    border-radius: 10px;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    overflow: hidden;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.selected-background-music
+{
+    border: 0.3vh var(--main-color-1) solid;
+}
+
+.background-music-item:first-child
+{
+    margin-left: 21vw;
+}
+
+.background-music-picture
+{
+    width: 6vw;
+    height: 8vh;
+    background-image: url(./img/background-item.jpg);
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+}
+
+.background-music-item-title
+{
+    width: 7vw;
+    background: #846cde;
+}
+
+.background-music-item-super-title
+{
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.background-music-buttons
+{
+    width: 2vw;
+    height: 8vh;
+}
+
+.background-music-play
+{
+    width: 2vw;
+    height: 4vh;
+    background: var(--main-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-music-play-button
+{
+    width: 1vw;
+    height: 2.5vh;
+    background-image: url(./img/play-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
+
+.background-music-play:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.background-music-pause
+{
+    width: 2vw;
+    height: 4vh;
+    background: var(--main-color-3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-music-pause-button
+{
+    width: 1vw;
+    height: 2.5vh;
+    background-image: url(./img/pause-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-music-pause:hover
+{
+    cursor: pointer;
+    background: #ea695c;
+}
+
+.background-music-select
+{
+    width: 2vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-music-select-button
+{
+    width: 1.4vw;
+    height: 2.5vh;
+    background-image: url(./img/select-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-music-select:hover
+{
+    cursor: pointer;
+    background: var(--main-color-2);
+}
+
+.background-music-unselect
+{
+    width: 2vw;
+    height: 4vh;
+    background: var(--main-color-2);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-music-unselect-button
+{
+    width: 1.4vw;
+    height: 2.5vh;
+    background-image: url(./img/unselect-button.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.background-music-unselect:hover
+{
+    cursor: pointer;
+    background: #f2ad27;
+}
+
+.selected
+{
+    border: 0.5vh solid var(--main-color-1);
+    margin-left: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+/* 
+    Top right container : contains the player & the animated background
+*/
+
+.top-right-container
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 26vw;
+    height: 42vh;
+    border-bottom: 3vh var(--main-color-1) solid;
+    border-top: 5vh var(--main-color-1) solid;
+    border-right: 3vw var(--main-color-1) solid;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.player-background-animated
+{
+    position: absolute;
+    width: 26vw;
+    height: 42vh;
+    pointer-events: none;
+    background-image: url(./img/player-animated.gif);
+    background-size: cover;
+    opacity: 100%;
+    transition: 1s ease;
+    filter: saturate(0%) invert(0%) hue-rotate(0deg);
+}
+
+.top-right-container-left-triangle
+{
+    width: 0; 
+    height: 0; 
+    z-index: 2;
+    pointer-events: none;
+    border-bottom: 300px solid transparent;
+    border-left: 300px solid var(--main-color-1);
+    transform: rotateZ(20deg) translateX(-6vw) translateY(-10vh);
+    transition: 0.3s ease;
+}
+
+.main-player-button-super-container
+{
+    position: absolute;
+    width: 26vw;
+    height: 42vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.main-player-button-container
+{
+    width: 10vw;
+    height: 14vh;
+}
+
+.main-player-button-container-top
+{
+    width: 10vw;
+    height: 2vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-player-button-container-top-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 2vh solid transparent;
+    border-left: 2vh solid var(--main-color-2);
+    transform: rotateZ(180deg) translateY(-0.05vh) translateX(-0.05vw);
+}
+
+.main-player-button-container-top-block
+{
+    width: 9vw;
+    height: 2vh;
+    background: var(--main-color-2);
+    transition: 0.5s ease;
+}
+
+.main-player-button-container-middle
+{
+    width: 10vw;
+    height: 10vh;
+    background: var(--main-color-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-player-button
+{
+    width: 6vw;
+    height: 6vh;
+    background-image: url(./img/play-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-player-button-container-footer
+{
+    width: 10vw;
+    height: 2vh;
+    display: flex;
+}
+
+.main-player-button-container-footer-block
+{
+    width: 9vw;
+    height: 2vh;
+    background: var(--main-color-2);
+    transition: 0.5s ease;
+}
+
+.main-player-button-container-footer-triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 2vh solid transparent;
+    border-left: 2vh solid var(--main-color-2);
+}
+
+.main-player-button-container:hover .main-player-button-container-top-block
+{
+    width: 6vw;
+}
+
+.main-player-button-container:hover .main-player-button-container-footer-block
+{
+    width: 6vw;
+}
+
+/* 
+    Bottom right container : contains configurations
+*/
+
+.bottom-right-container
+{
+    width: 26vw;
+    height: 42vh;
+    border-bottom: 5vh var(--main-color-1) solid;
+    border-top: 3vh var(--main-color-1) solid;
+    border-right: 3vw var(--main-color-1) solid;
+    transition: 0.3s ease;
+}
+
+
+.bottom-right-container .content
+{
+    position: absolute;
+    width: 26vw;
+    height: 42vh;
+    background: var(--container-color-1);
+}
+
+.bottom-right-container .content .configurations
+{
+    width: 26vw;
+    height: 36vh;
+}
+
+.bottom-right-container .content .configurations .more-soon
+{
+    padding-left: 1vw;
+    padding-top: 1vh;
+    font-weight: 100;
+    font-size: 22px;
+    margin: 0;
+    pointer-events: none;
+    font-family: sans-serif;
+    color: var(--text-color-3);
+}
+
+.bottom-right-container .content .configurations .configuration-container
+{
+    padding-top: 2vh;
+    padding-left: 1vw;
+    width: 25vw;
+    height: 5vh;
+    display: flex;
+}
+
+.bottom-right-container .content .configurations .configuration-container .button
+{
+    width: 3vw;
+    height: 5vh;
+    margin-right: 1vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.configurations .configuration-container .button .left 
+{
+    width: 0.5vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.configurations .configuration-container .button .left .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.1vh solid transparent;
+    border-right: 1.1vh solid var(--main-color-4);
+    transform: rotateZ(90deg);
+    transition: 0.3s ease;
+}
+
+.configurations .configuration-container .button .left .block
+{
+    width: 0.5vw;
+    height: 3vh;
+    background: var(--main-color-4);
+}
+
+.configurations .configuration-container .button .center 
+{
+    width: 2vw;
+    height: 4vh;
+    background: var(--main-color-4);
+}
+
+.configurations .configuration-container .button .center .plus
+{
+    margin: 0;
+    margin-left: 1vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 40px;
+    transform: translateX(-0.8vw) translateY(-0.9vh);
+    color: var(--text-color-2);
+}
+
+.configurations .configuration-container .button .right
+{
+    width: 0.5vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.configurations .configuration-container .button .right .block
+{
+    width: 0.5vw;
+    height: 3vh;
+    background: var(--main-color-4);
+}
+
+.configurations .configuration-container .button .right .triangle
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 1.1vh solid transparent;
+    border-left: 1.1vh solid var(--main-color-4);
+    transform: rotateZ(0deg);
+    transition: 0.3s ease;
+}
+
+.bottom-right-container .content .configurations .configuration-container .title
+{
+    width: 20vw;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--main-color-2);
+}
+
+.bottom-right-container .content .configurations .configuration-container .title .config-name
+{
+    margin: 0;
+    margin-left: 1vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.bottom-right-container .content .configurations .configuration-container .title .config-size
+{
+    margin: 0;
+    margin-right: 1vw;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.bottom-right-container .content .header
+{
+    width: 26vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    background: var(--main-color-2);
+}
+
+.bottom-right-container .content .header .title
+{
+    margin: 0;
+    margin-left: 1vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 24px;
+    color: var(--text-color-1);
+}
+
+.bottom-right-container .big-triangle-container
+{
+    width: 26vw;
+    height: 42vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bottom-right-container .big-triangle 
+{
+    width: 0; 
+    height: 0; 
+    border-bottom: 20vh solid transparent;
+    border-left: 20vh solid var(--main-color-1);
+    transform: rotateZ(200deg) translateX(-2vw) translateY(-2vw);
+}

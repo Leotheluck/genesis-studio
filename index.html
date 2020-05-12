@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Studio | v1.2.0</title>
+    <meta name="description" content="Introducting Genesis Studio, a completely open-source Drum Pad created using Vanilla JavaScript.">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./master.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="tutorial-views">
+            <div class="tutorial-skip">
+                <div class="checkbox">
+                    <div class="left">
+                        <div class="triangle"></div>
+                        <div class="block"></div>
+                    </div>
+                    <div class="center">
+                        <h4 class="title">passer</h4>
+                    </div>
+                    <div class="right">
+                        <div class="block"></div>
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tutorial-characters">
+                <img class="character" src="./img/tutorial.png">
+            </div>
+            <div class="tutorial-1-message tutorial-message">
+                <div class="header">
+                    <div class="triangle"></div>
+                    <h3 class="name">kotomi (ingénieure son)</h3>
+                </div>
+                <div class="content">
+                    <h4 class="message">Salut ! Je m'appelle Kotomi, je vais te guider dans le Genesis Studio ! Les zones mises en lumière sont celles que je vais t'expliquer à chaque fois... Cette fois-ci il est question du choix des sons, un aspect principal pour bien utiliser notre application ! (⩾﹏⩽) Le menu mis en valeur est le répertoire des sons de Genesis, c'est un menu scrollable qui compte donc tous nos sons, tu peux choisir de les prévisualiser avec le petit bouton "play" ou bien tu peux décider de les ajouter à ta composition en les attrapant avec ta souris !</h4>
+                    <div class="checkbox-container">
+                        <div class="checkbox">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="title">suivant</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="tutorial-1">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+
+            <div class="tutorial-2-message tutorial-message">
+                <div class="header">
+                    <div class="triangle"></div>
+                    <h3 class="name">kotomi (ingénieure son)</h3>
+                </div>
+                <div class="content">
+                    <h4 class="message">L'élément que tu vois en lumière est la piste audio !!! C'est super important ! C'est sur cette piste que tu viendras déposer les instruments choisis dans la partie précédente, il est possible de régler la piste en 3 modes différents, si tu souhaites être plus précis ou avoir une musique qui dure plus longtemps... Tu peux aussi vider tout d'un coup avec le bouton "vider" ! <br> Enfin, un petit marqueur de temps passera une fois la musique lancée pour t'indiquer où elle en est.</h4>
+                    <div class="checkbox-container">
+                        <div class="checkbox active-checkbox">
+                            <div class="left">
+                                <div class="triangle active-triangle"></div>
+                                <div class="block active"></div>
+                            </div>
+                            <div class="center active-center">
+                                <h4 class="title">précédent</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block active"></div>
+                                <div class="triangle active-triangle"></div>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="title">suivant</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="tutorial-2">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+
+            <div class="tutorial-3-message tutorial-message">
+                <div class="header">
+                    <div class="triangle"></div>
+                    <h3 class="name">kotomi (ingénieure son)</h3>
+                </div>
+                <div class="content">
+                    <h4 class="message">L'onglet "Musiques de fond" te permet de rajouter une musique de fond à ta composition, une fois que tu auras appuyé sur le bouton play, la musique se jouera en complément des instruments que tu auras disposé sur la piste, du moins si tu en as disposé... <br> Il est d'ailleurs bon à noter que tu peux combiner les musiques de fond ! Pour les activer, il te suffit simplement d'appuyer sur le petit bouton "plus" à côté.</h4>
+                    <div class="checkbox-container">
+                        <div class="checkbox active-checkbox">
+                            <div class="left">
+                                <div class="triangle active-triangle"></div>
+                                <div class="block active"></div>
+                            </div>
+                            <div class="center active-center">
+                                <h4 class="title">précédent</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block active"></div>
+                                <div class="triangle active-triangle"></div>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="title">suivant</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="tutorial-3">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+
+            <div class="tutorial-4-message tutorial-message">
+                <div class="header">
+                    <div class="triangle"></div>
+                    <h3 class="name">kotomi (ingénieure son)</h3>
+                </div>
+                <div class="content">
+                    <h4 class="message">Ce que tu vois là, c'est le lecteur Genesis ! Il te permettra de démarrer la lecture de ta composition, c'est à dire ta piste audio et les musiques de fond que tu pourrais avoir... Au fait, !!! Si tu appuies sur le bouton play, il se transformera en bouton pause, qui te permettra d'arrêter la lecture de ta composition ! Le lecteur Genesis est aussi intelligent, quand il joue un instrument de ta piste audio, le lecteur prendra la couleur de cet instrument pendant la durée du son de cet instrument !</h4>
+                    <div class="checkbox-container">
+                        <div class="checkbox active-checkbox">
+                            <div class="left">
+                                <div class="triangle active-triangle"></div>
+                                <div class="block active"></div>
+                            </div>
+                            <div class="center active-center">
+                                <h4 class="title">précédent</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block active"></div>
+                                <div class="triangle active-triangle"></div>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="title">suivant</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="tutorial-4">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+
+            <div class="tutorial-5-message tutorial-message">
+                <div class="header">
+                    <div class="triangle"></div>
+                    <h3 class="name">kotomi (ingénieure son)</h3>
+                </div>
+                <div class="content">
+                    <h4 class="message">On termine ce tutoriel par l'onglet "Configurations" ! Tu retrouveras ici différentes musiques composées à l'aide de Genesis Studio que tu pourras appliquer à ta composition à l'aide du petit "plus" à côté. Fais attention cependant, puisque lorsque tu appliques une configuration, ce que tu aurais pu mettre avant sur la piste sera supprimé ! Et voilà, c'est la fin du tutoriel !!! Merci d'avoir écouté...</h4>
+                    <div class="checkbox-container">
+                        <div class="checkbox active-checkbox">
+                            <div class="left">
+                                <div class="triangle active-triangle"></div>
+                                <div class="block active"></div>
+                            </div>
+                            <div class="center active-center">
+                                <h4 class="title">précédent</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block active"></div>
+                                <div class="triangle active-triangle"></div>
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="title">terminer</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="tutorial-5">
+                <div class="top"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="bottom"></div>
+            </div>
+
+        </div>
+
+        <div class="absolute-nav">
+            <div class="nav-content">
+                <div class="nav-title">
+                    <h3 class="nav-super-title">Paramètres</h3>
+                </div>
+                <div class="nav-buttons">
+                    <div class="nav-audio nav-button">
+                        <h3 class="nav-button-title">Audio</h3>
+                        <div class="nav-style-bar">
+                            <div class="nav-style-bar-left"></div>
+                            <div class="nav-style-bar-middle"></div>
+                            <div class="nav-style-bar-right"></div>
+                        </div>
+                    </div>
+                    <div class="nav-graphics nav-button">
+                        <h3 class="nav-button-title">Graphismes</h3>
+                        <div class="nav-style-bar">
+                            <div class="nav-style-bar-left"></div>
+                            <div class="nav-style-bar-middle"></div>
+                            <div class="nav-style-bar-right"></div>
+                        </div>
+                    </div>
+                    <div class="nav-language nav-button">
+                        <h3 class="nav-button-title">Langue</h3>
+                        <div class="nav-style-bar">
+                            <div class="nav-style-bar-left"></div>
+                            <div class="nav-style-bar-middle"></div>
+                            <div class="nav-style-bar-right"></div>
+                        </div>
+                    </div>
+                    <div class="nav-tutorial nav-button">
+                        <h3 class="nav-button-title">Tutoriel</h3>
+                        <div class="nav-style-bar">
+                            <div class="nav-style-bar-left"></div>
+                            <div class="nav-style-bar-middle"></div>
+                            <div class="nav-style-bar-right"></div>
+                        </div>
+                    </div>
+                    <div class="nav-github nav-button">
+                        <h3 class="nav-button-title">Suivre le projet sur GitHub</h3>
+                        <div class="nav-style-bar">
+                            <div class="nav-style-bar-left"></div>
+                            <div class="nav-style-bar-middle"></div>
+                            <div class="nav-style-bar-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-footer">
+                    <h3 class="nav-footer-title">© Leotheluck - 2020</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="options">
+            <div class="audio">
+                <div class="inner">
+                    <div class="header">
+                        <h3 class="title">Paramètres audio</h3>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content">
+                            <div class="slider-option volume">
+                                <h4 class="title active">Volume général</h4>
+                                <input type="range" min="0" max="100" value="75" class="slider active-slider">
+                            </div>
+                            <div class="slider-option nav-volume">
+                                <h4 class="title">Effets de navigation</h4>
+                                <input type="range" min="0" max="100" value="75" class="slider">
+                            </div>
+                            <div class="slider-option instrument-volume">
+                                <h4 class="title">Instruments</h4>
+                                <input type="range" min="0" max="100" value="75" class="slider">
+                            </div>
+                            <div class="slider-option background-volume">
+                                <h4 class="title">Musiques de fond</h4>
+                                <input type="range" min="0" max="100" value="75" class="slider">
+                            </div>
+                        </div>
+                        <div class="volume-title">
+                            <h3 class="title">75</h3>
+                        </div>
+                    </div>
+                    <div class="footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="graphics">
+                <div class="inner">
+                    <div class="header">
+                        <h3 class="title">Paramètres graphiques</h3>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="content-top">
+                            <div class="mode-container">
+                                <h4 class="big-title">Light mode</h4>
+                                <div class="checkbox active-checkbox">
+                                    <div class="left">
+                                        <div class="triangle active-triangle"></div>
+                                        <div class="block active"></div>
+                                    </div>
+                                    <div class="center active-center">
+                                        <h4 class="title light-mode-activate">actif</h4>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block active"></div>
+                                        <div class="triangle active-triangle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mode-container">
+                                <h4 class="big-title">Dark mode</h4>
+                                <div class="checkbox">
+                                    <div class="left">
+                                        <div class="triangle"></div>
+                                        <div class="block"></div>
+                                    </div>
+                                    <div class="center">
+                                        <h4 class="title dark-mode-activate">activer</h4>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block"></div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mode-container">
+                                <h4 class="big-title">Red mode</h4>
+                                <div class="checkbox">
+                                    <div class="left">
+                                        <div class="triangle"></div>
+                                        <div class="block"></div>
+                                    </div>
+                                    <div class="center">
+                                        <h4 class="title red-mode-activate">activer</h4>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block"></div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3 class="big-title">Personnalisation du lecteur</h3>
+                            <div class="black-white player-palette-container">
+                                <div class="checkbox active-checkbox">
+                                    <div class="left">
+                                        <div class="triangle active-triangle"></div>
+                                        <div class="block active"></div>
+                                    </div>
+                                    <div class="center active-center">
+                                        <div class="color1"></div>
+                                        <div class="color2"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block active"></div>
+                                        <div class="triangle active-triangle"></div>
+                                    </div>
+                                </div>
+                                <h4 class="title">Noir & blanc</h4>
+                            </div>
+                            <div class="white-black player-palette-container">
+                                <div class="checkbox">
+                                    <div class="left">
+                                        <div class="triangle"></div>
+                                        <div class="block"></div>
+                                    </div>
+                                    <div class="center">
+                                        <div class="color1"></div>
+                                        <div class="color2"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block"></div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                                <h4 class="title">Blanc & noir</h4>
+                            </div>
+                            <div class="white-red player-palette-container">
+                                <div class="checkbox">
+                                    <div class="left">
+                                        <div class="triangle"></div>
+                                        <div class="block"></div>
+                                    </div>
+                                    <div class="center">
+                                        <div class="color1"></div>
+                                        <div class="color2"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block"></div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                                <h4 class="title">Blanc & rouge</h4>
+                            </div>
+                            <div class="black-yellow player-palette-container">
+                                <div class="checkbox">
+                                    <div class="left">
+                                        <div class="triangle"></div>
+                                        <div class="block"></div>
+                                    </div>
+                                    <div class="center">
+                                        <div class="color1"></div>
+                                        <div class="color2"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="block"></div>
+                                        <div class="triangle"></div>
+                                    </div>
+                                </div>
+                                <h4 class="title">Noir & jaune</h4>
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="triangle-container">
+                                <div class="triangle"></div>
+                            </div>
+                            <div class="triangle2-container">
+                                <div class="triangle2"></div>
+                            </div>
+                            <div class="player-still">
+                                <div class="player"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="language">
+                <div class="inner">
+                    <div class="header">
+                        <h3 class="title">Paramètres de langue</h3>
+                    </div>
+                    <div class="content">
+                        <div class="language-container">
+                            <h4 class="big-title">Français</h4>
+                            <div class="checkbox active-checkbox">
+                                <div class="left">
+                                    <div class="triangle active-triangle"></div>
+                                    <div class="block active"></div>
+                                </div>
+                                <div class="center active-center">
+                                    <h4 class="title french-activate">actif</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block active"></div>
+                                    <div class="triangle active-triangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="language-container">
+                            <h4 class="big-title">English</h4>
+                            <div class="checkbox">
+                                <div class="left">
+                                    <div class="triangle"></div>
+                                    <div class="block"></div>
+                                </div>
+                                <div class="center">
+                                    <h4 class="title english-activate">activer</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="language-container">
+                            <h4 class="big-title">日本語</h4>
+                            <div class="checkbox">
+                                <div class="left">
+                                    <div class="triangle"></div>
+                                    <div class="block"></div>
+                                </div>
+                                <div class="center">
+                                    <h4 class="title japanese-activate">activer</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+
+            <div class="tutorial">
+                <div class="inner">
+                    <div class="header">
+                        <h3 class="title">Tutoriel</h3>
+                    </div>
+                    <div class="content">
+                        <div class="tutorial-container">
+                            <h4 class="big-title">Lancer le tutoriel ?</h4>
+                            <div class="checkbox active-checkbox">
+                                <div class="left">
+                                    <div class="triangle active-triangle"></div>
+                                    <div class="block active"></div>
+                                </div>
+                                <div class="center active-center">
+                                    <h4 class="title">non</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block active"></div>
+                                    <div class="triangle active-triangle"></div>
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <div class="left">
+                                    <div class="triangle"></div>
+                                    <div class="block"></div>
+                                </div>
+                                <div class="center">
+                                    <h4 class="title">oui</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+
+            <div class="github">
+                <div class="inner">
+                    <div class="header">
+                        <h3 class="title">GitHub</h3>
+                    </div>
+                    <div class="content">
+                        <div class="github-container">
+                            <h4 class="big-title">Visiter la page GitHub ?</h4>
+                            <div class="checkbox active-checkbox">
+                                <div class="left">
+                                    <div class="triangle active-triangle"></div>
+                                    <div class="block active"></div>
+                                </div>
+                                <div class="center active-center">
+                                    <h4 class="title">non</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block active"></div>
+                                    <div class="triangle active-triangle"></div>
+                                </div>
+                            </div>
+                            <a href="https://github.com/Leotheluck" target="_blank" class="checkbox">
+                                <div class="left">
+                                    <div class="triangle"></div>
+                                    <div class="block"></div>
+                                </div>
+                                <div class="center">
+                                    <h4 class="title">oui</h4>
+                                </div>
+                                <div class="right">
+                                    <div class="block"></div>
+                                    <div class="triangle"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="main-filter">
+
+        </div>
+        <div class="left-container">
+            <div class="absolute-menu">
+                <div class="menu-bar">
+                    <div class="menu-bar-left"></div>
+                    <div class="menu-bar-middle"></div>
+                    <div class="menu-bar-right"></div>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu-bar-left"></div>
+                    <div class="menu-bar-middle"></div>
+                    <div class="menu-bar-right"></div>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu-bar-left"></div>
+                    <div class="menu-bar-middle"></div>
+                    <div class="menu-bar-right"></div>
+                </div>
+                <div class="close-menu">
+                    <h4 class="close-menu-title">×</h4>
+                </div>
+            </div>
+            <div class="absolute-triangles">
+                <div class="triangle-container">
+                    <div class="top-left-triangle"></div>
+                </div>
+                <div class="triangle-container">
+                    <div class="bottom-right-triangle"></div>
+                </div>
+            </div>
+            <div class="main-title">
+                <h1 class="main-super-title">genesis studio v1.2.0</h1>
+                <div class="main-title-right"></div>
+            </div>
+            <div class="sound-list-container">
+                <div class="sound-list-triangle-container">
+                    <div class="sound-list-triangle"></div>
+                </div>
+                <div class="sound-list-super-triangle-container">
+                    <div class="sound-list-triangle2-container">
+                        <div class="sound-list-triangle2"></div>
+                    </div>
+                </div>
+                <div class="sound-list-title">
+                    <h2 class="sound-list-super-title">choix des sons</h2>
+                </div>
+                <div class="sound-list"></div>
+            </div>
+            <div class="super-sound-play-bar">
+                <div class="sound-play-bar">
+                    <div class="sound-play-bar-title">
+                        <div class="sound-play-bar-super-title">
+                            <div class="sound-play-bar-super-title-triangle-left"></div>
+                            <div class="sound-play-bar-super-title-middle">
+                                <h3 class="sound-play-bar-super-title-text">piste audio</h3>
+                            </div>
+                            <div class="sound-play-bar-super-title-triangle-right"></div>
+                        </div>
+                    </div>
+                    <div class="sound-play-bar-options">
+                        <div class="sound-play-bar-options-triangle"></div>
+                        <div class="sound-play-bar-options-change">
+                            <h4 class="sound-play-bar-options-title">8x-8s</h4>
+                        </div>
+                    </div>
+                    <div class="sound-play-bar-menu">
+                        <div class="sound-play-bar-option-box active-bar box-8x">
+                            <h3 class="sound-play-bar-option-title">8x-8s</h3>
+                        </div>
+                        <div class="sound-play-bar-option-box box-16x">
+                            <h3 class="sound-play-bar-option-title">16x-8s</h3>
+                        </div>
+                        <div class="sound-play-bar-option-box box-32x">
+                            <h3 class="sound-play-bar-option-title">32x-16s</h3>
+                        </div>
+                    </div>
+                    <div class="clear">
+                        <div class="left-triangle"></div>
+                        <div class="button">
+                            <h3 class="title">vider</h3>
+                        </div>
+                        <div class="right-triangle"></div>
+                    </div>
+                    <div class="sound-play-bar-version-8">
+                        <div class="super-time-stamp">
+                            <div class="time-stamp"></div>
+                        </div>
+                        <div class="time-markers">
+                            <h5 class="time-mark">01:000</h5>
+                            <h5 class="time-mark">02:000</h5>
+                            <h5 class="time-mark">03:000</h5>
+                            <h5 class="time-mark">04:000</h5>
+                            <h5 class="time-mark">05:000</h5>
+                            <h5 class="time-mark">06:000</h5>
+                            <h5 class="time-mark">07:000</h5>
+                        </div>
+                        <div class="sound-play-bar-stage sound-play-bar-stage-1">
+                            <div class="sound-box box-1-1"></div>
+                            <div class="sound-box box-2-1"></div>
+                            <div class="sound-box box-3-1"></div>
+                            <div class="sound-box box-4-1"></div>
+                            <div class="sound-box box-5-1"></div>
+                            <div class="sound-box box-6-1"></div>
+                            <div class="sound-box box-7-1"></div>
+                            <div class="sound-box box-8-1"></div>
+                        </div>
+                        <div class="sound-play-bar-stage sound-play-bar-stage-2">
+                            <div class="sound-box box-1-2"></div>
+                            <div class="sound-box box-2-2"></div>
+                            <div class="sound-box box-3-2"></div>
+                            <div class="sound-box box-4-2"></div>
+                            <div class="sound-box box-5-2"></div>
+                            <div class="sound-box box-6-2"></div>
+                            <div class="sound-box box-7-2"></div>
+                            <div class="sound-box box-8-2"></div>
+                        </div>
+                        <div class="sound-play-bar-stage sound-play-bar-stage-3">
+                            <div class="sound-box box-1-3"></div>
+                            <div class="sound-box box-2-3"></div>
+                            <div class="sound-box box-3-3"></div>
+                            <div class="sound-box box-4-3"></div>
+                            <div class="sound-box box-5-3"></div>
+                            <div class="sound-box box-6-3"></div>
+                            <div class="sound-box box-7-3"></div>
+                            <div class="sound-box box-8-3"></div>
+                        </div>
+                    </div>
+                    <div class="sound-play-bar-version-16">
+                        <div class="super-time-stamp-16X">
+                            <div class="time-stamp-16X"></div>
+                        </div>
+                        <div class="time-markers-16-container">
+                            <div class="time-markers-16">
+                                <h5 class="time-mark-16">00:000</h5>
+                                <h5 class="time-mark-16">01:000</h5>
+                                <h5 class="time-mark-16">01:500</h5>
+                                <h5 class="time-mark-16">02:000</h5>
+                                <h5 class="time-mark-16">02:500</h5>
+                                <h5 class="time-mark-16">03:000</h5>
+                                <h5 class="time-mark-16">03:500</h5>
+                                <h5 class="time-mark-16">04:000</h5>
+                                <h5 class="time-mark-16">04:500</h5>
+                                <h5 class="time-mark-16">05:000</h5>
+                                <h5 class="time-mark-16">05:500</h5>
+                                <h5 class="time-mark-16">06:000</h5>
+                                <h5 class="time-mark-16">06:500</h5>
+                                <h5 class="time-mark-16">07:000</h5>
+                                <h5 class="time-mark-16">07:500</h5>
+                            </div>
+                        </div>
+                        <div class="sound-play-bar-stage-16X sound-play-bar-stage-1">
+                            <div class="sound-box box-1-1"></div>
+                            <div class="sound-box box-2-1"></div>
+                            <div class="sound-box box-3-1"></div>
+                            <div class="sound-box box-4-1"></div>
+                            <div class="sound-box box-5-1"></div>
+                            <div class="sound-box box-6-1"></div>
+                            <div class="sound-box box-7-1"></div>
+                            <div class="sound-box box-8-1"></div>
+                            <div class="sound-box box-9-1"></div>
+                            <div class="sound-box box-10-1"></div>
+                            <div class="sound-box box-11-1"></div>
+                            <div class="sound-box box-12-1"></div>
+                            <div class="sound-box box-13-1"></div>
+                            <div class="sound-box box-14-1"></div>
+                            <div class="sound-box box-15-1"></div>
+                            <div class="sound-box box-16-1"></div>
+                        </div>
+                        <div class="sound-play-bar-stage-16X sound-play-bar-stage-2">
+                            <div class="sound-box box-1-2"></div>
+                            <div class="sound-box box-2-2"></div>
+                            <div class="sound-box box-3-2"></div>
+                            <div class="sound-box box-4-2"></div>
+                            <div class="sound-box box-5-2"></div>
+                            <div class="sound-box box-6-2"></div>
+                            <div class="sound-box box-7-2"></div>
+                            <div class="sound-box box-8-2"></div>
+                            <div class="sound-box box-9-2"></div>
+                            <div class="sound-box box-10-2"></div>
+                            <div class="sound-box box-11-2"></div>
+                            <div class="sound-box box-12-2"></div>
+                            <div class="sound-box box-13-2"></div>
+                            <div class="sound-box box-14-2"></div>
+                            <div class="sound-box box-15-2"></div>
+                            <div class="sound-box box-16-2"></div>
+                        </div>
+                        <div class="sound-play-bar-stage-16X sound-play-bar-stage-3">
+                            <div class="sound-box box-1-3"></div>
+                            <div class="sound-box box-2-3"></div>
+                            <div class="sound-box box-3-3"></div>
+                            <div class="sound-box box-4-3"></div>
+                            <div class="sound-box box-5-3"></div>
+                            <div class="sound-box box-6-3"></div>
+                            <div class="sound-box box-7-3"></div>
+                            <div class="sound-box box-8-3"></div>
+                            <div class="sound-box box-9-3"></div>
+                            <div class="sound-box box-10-3"></div>
+                            <div class="sound-box box-11-3"></div>
+                            <div class="sound-box box-12-3"></div>
+                            <div class="sound-box box-13-3"></div>
+                            <div class="sound-box box-14-3"></div>
+                            <div class="sound-box box-15-3"></div>
+                            <div class="sound-box box-16-3"></div>
+                        </div>
+                    </div>
+                    <div class="sound-play-bar-version-32">
+                        <div class="super-time-stamp-32X">
+                            <div class="time-stamp-32X"></div>
+                        </div>
+                        <div class="time-markers-32-container">
+                            <div class="time-markers-32">
+                                <h5 class="time-mark-32">00:000</h5>
+                                <h5 class="time-mark-32">01:000</h5>
+                                <h5 class="time-mark-32">01:500</h5>
+                                <h5 class="time-mark-32">02:000</h5>
+                                <h5 class="time-mark-32">02:500</h5>
+                                <h5 class="time-mark-32">03:000</h5>
+                                <h5 class="time-mark-32">03:500</h5>
+                                <h5 class="time-mark-32">04:000</h5>
+                                <h5 class="time-mark-32">04:500</h5>
+                                <h5 class="time-mark-32">05:000</h5>
+                                <h5 class="time-mark-32">05:500</h5>
+                                <h5 class="time-mark-32">06:000</h5>
+                                <h5 class="time-mark-32">06:500</h5>
+                                <h5 class="time-mark-32">07:000</h5>
+                                <h5 class="time-mark-32">07:500</h5>
+                                <h5 class="time-mark-32">08:000</h5>
+                                <h5 class="time-mark-32">08:500</h5>
+                                <h5 class="time-mark-32">09:000</h5>
+                                <h5 class="time-mark-32">09:500</h5>
+                                <h5 class="time-mark-32">10:000</h5>
+                                <h5 class="time-mark-32">10:500</h5>
+                                <h5 class="time-mark-32">11:000</h5>
+                                <h5 class="time-mark-32">11:500</h5>
+                                <h5 class="time-mark-32">12:000</h5>
+                                <h5 class="time-mark-32">12:500</h5>
+                                <h5 class="time-mark-32">13:000</h5>
+                                <h5 class="time-mark-32">13:500</h5>
+                                <h5 class="time-mark-32">14:000</h5>
+                                <h5 class="time-mark-32">14:500</h5>
+                                <h5 class="time-mark-32">15:000</h5>
+                                <h5 class="time-mark-32">15:500</h5>
+                            </div>
+                        </div>
+                        <div class="sound-play-bar-stage-32X sound-play-bar-stage-1">
+                            <div class="sound-box box-1-1"></div>
+                            <div class="sound-box box-2-1"></div>
+                            <div class="sound-box box-3-1"></div>
+                            <div class="sound-box box-4-1"></div>
+                            <div class="sound-box box-5-1"></div>
+                            <div class="sound-box box-6-1"></div>
+                            <div class="sound-box box-7-1"></div>
+                            <div class="sound-box box-8-1"></div>
+                            <div class="sound-box box-9-1"></div>
+                            <div class="sound-box box-10-1"></div>
+                            <div class="sound-box box-11-1"></div>
+                            <div class="sound-box box-12-1"></div>
+                            <div class="sound-box box-13-1"></div>
+                            <div class="sound-box box-14-1"></div>
+                            <div class="sound-box box-15-1"></div>
+                            <div class="sound-box box-16-1"></div>
+                            <div class="sound-box box-17-1"></div>
+                            <div class="sound-box box-18-1"></div>
+                            <div class="sound-box box-19-1"></div>
+                            <div class="sound-box box-20-1"></div>
+                            <div class="sound-box box-21-1"></div>
+                            <div class="sound-box box-22-1"></div>
+                            <div class="sound-box box-23-1"></div>
+                            <div class="sound-box box-24-1"></div>
+                            <div class="sound-box box-25-1"></div>
+                            <div class="sound-box box-26-1"></div>
+                            <div class="sound-box box-27-1"></div>
+                            <div class="sound-box box-28-1"></div>
+                            <div class="sound-box box-29-1"></div>
+                            <div class="sound-box box-30-1"></div>
+                            <div class="sound-box box-31-1"></div>
+                            <div class="sound-box box-32-1"></div>
+                        </div>
+                        <div class="sound-play-bar-stage-32X sound-play-bar-stage-2">
+                            <div class="sound-box box-1-2"></div>
+                            <div class="sound-box box-2-2"></div>
+                            <div class="sound-box box-3-2"></div>
+                            <div class="sound-box box-4-2"></div>
+                            <div class="sound-box box-5-2"></div>
+                            <div class="sound-box box-6-2"></div>
+                            <div class="sound-box box-7-2"></div>
+                            <div class="sound-box box-8-2"></div>
+                            <div class="sound-box box-9-2"></div>
+                            <div class="sound-box box-10-2"></div>
+                            <div class="sound-box box-11-2"></div>
+                            <div class="sound-box box-12-2"></div>
+                            <div class="sound-box box-13-2"></div>
+                            <div class="sound-box box-14-2"></div>
+                            <div class="sound-box box-15-2"></div>
+                            <div class="sound-box box-16-2"></div>
+                            <div class="sound-box box-17-2"></div>
+                            <div class="sound-box box-18-2"></div>
+                            <div class="sound-box box-19-2"></div>
+                            <div class="sound-box box-20-2"></div>
+                            <div class="sound-box box-21-2"></div>
+                            <div class="sound-box box-22-2"></div>
+                            <div class="sound-box box-23-2"></div>
+                            <div class="sound-box box-24-2"></div>
+                            <div class="sound-box box-25-2"></div>
+                            <div class="sound-box box-26-2"></div>
+                            <div class="sound-box box-27-2"></div>
+                            <div class="sound-box box-28-2"></div>
+                            <div class="sound-box box-29-2"></div>
+                            <div class="sound-box box-30-2"></div>
+                            <div class="sound-box box-31-2"></div>
+                            <div class="sound-box box-32-2"></div>
+                        </div>
+                        <div class="sound-play-bar-stage-32X sound-play-bar-stage-3">
+                            <div class="sound-box box-1-3"></div>
+                            <div class="sound-box box-2-3"></div>
+                            <div class="sound-box box-3-3"></div>
+                            <div class="sound-box box-4-3"></div>
+                            <div class="sound-box box-5-3"></div>
+                            <div class="sound-box box-6-3"></div>
+                            <div class="sound-box box-7-3"></div>
+                            <div class="sound-box box-8-3"></div>
+                            <div class="sound-box box-9-3"></div>
+                            <div class="sound-box box-10-3"></div>
+                            <div class="sound-box box-11-3"></div>
+                            <div class="sound-box box-12-3"></div>
+                            <div class="sound-box box-13-3"></div>
+                            <div class="sound-box box-14-3"></div>
+                            <div class="sound-box box-15-3"></div>
+                            <div class="sound-box box-16-3"></div>
+                            <div class="sound-box box-17-3"></div>
+                            <div class="sound-box box-18-3"></div>
+                            <div class="sound-box box-19-3"></div>
+                            <div class="sound-box box-20-3"></div>
+                            <div class="sound-box box-21-3"></div>
+                            <div class="sound-box box-22-3"></div>
+                            <div class="sound-box box-23-3"></div>
+                            <div class="sound-box box-24-3"></div>
+                            <div class="sound-box box-25-3"></div>
+                            <div class="sound-box box-26-3"></div>
+                            <div class="sound-box box-27-3"></div>
+                            <div class="sound-box box-28-3"></div>
+                            <div class="sound-box box-29-3"></div>
+                            <div class="sound-box box-30-3"></div>
+                            <div class="sound-box box-31-3"></div>
+                            <div class="sound-box box-32-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="background-music-container">
+                <div class="background-music-title">
+                    <div class="background-triangle-top-left"></div>
+                    <div class="background-music-title-top">
+                        <h3 class="background-music-super-title">musiques de fond</h3>
+                    </div>
+                    <div class="background-music-title-foot">
+                        <div class="background-triangle-bottom-right"></div>
+                    </div>
+                </div>
+                <div class="background-music-list-transparent"></div>
+                <div class="background-music-list">
+                    <div class="background-music-item" id="background01">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">hits</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background02">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">bassline</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background03">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">wobble</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background04">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">japanese</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background05">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">rythmic</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background06">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">beat</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background07">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">space</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background08">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">synth</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background09">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">mood</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background10">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">future</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="background-music-item" id="background11">
+                        <div class="background-music-picture">
+                            <div class="background-music-item-title">
+                                <h3 class="background-music-item-super-title">drums</h3>
+                            </div>
+                        </div>
+                        <div class="background-music-buttons">
+                            <div class="background-music-play">
+                                <div class="background-music-play-button"></div>
+                            </div>
+                            <div class="background-music-pause">
+                                <div class="background-music-pause-button"></div>
+                            </div>
+                            <div class="background-music-select">
+                                <div class="background-music-select-button"></div>
+                            </div>
+                            <div class="background-music-unselect">
+                                <div class="background-music-unselect-button"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-right-container">
+            <div class="player-background">
+                <div class="player-background-animated"></div>
+            </div>
+            <div class="main-player-button-super-container">
+                <div class="main-player-button-container">
+                    <div class="main-player-button-container-top">
+                        <div class="main-player-button-container-top-triangle"></div>
+                        <div class="main-player-button-container-top-block"></div>
+                    </div>
+                    <div class="main-player-button-container-middle">
+                        <div class="main-player-button"></div>
+                    </div>
+                    <div class="main-player-button-container-footer">
+                        <div class="main-player-button-container-footer-block"></div>
+                        <div class="main-player-button-container-footer-triangle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-right-container-left-triangle"></div>
+        </div>
+        <div class="bottom-right-container">
+            <div class="content">
+                <div class="configurations">
+                    <div class="configuration-container configuration-1">
+                        <div class="button">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="plus">+</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="config-name">modern beats</h3>
+                            <h3 class="config-size">8x-8s</h3>
+                        </div>
+                    </div>
+
+                    <div class="configuration-container configuration-2">
+                        <div class="button">
+                            <div class="left">
+                                <div class="triangle"></div>
+                                <div class="block"></div>
+                            </div>
+                            <div class="center">
+                                <h4 class="plus">+</h4>
+                            </div>
+                            <div class="right">
+                                <div class="block"></div>
+                                <div class="triangle"></div>
+                            </div>
+                        </div>
+                        <div class="title">
+                            <h3 class="config-name">japanese mood</h3>
+                            <h3 class="config-size">8x-8s</h3>
+                        </div>
+                    </div>
+
+                    <h3 class="more-soon">Plus à venir.</h3>
+                </div>
+                <div class="header">
+                    <h3 class="title">Configurations</h3>
+                </div>
+            </div>
+            <div class="big-triangle-container">
+                <div class="big-triangle"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/AudioEffects.js"></script>
+    <script src="./scripts/DomElements.js"></script>
+    <script src="./scripts/Variables.js"></script>
+    <script src="./scripts/Languages.js"></script>
+
+    <script src="./scripts/AudioPlayers.js"></script>
+    <script src="./scripts/MenuInteractions.js"></script>
+    <script src="./scripts/AudioTrackOptions.js"></script>
+    <script src="./scripts/AudioMechanics.js"></script>
+    <script src="./scripts/DragDropMechanics.js"></script>
+    <script src="./scripts/MainPlayMechanics.js"></script>
+    <script src="./scripts/GraphicsSwitchMechanics.js"></script>
+    <script src="./scripts/LanguageSwitch.js"></script>
+
+    <script src="./Main.js"></script>
+</body>
+</html>
